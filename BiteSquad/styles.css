@@ -2,14 +2,18 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.jpg');
     background-position: center;
     background-size: cover;
     overflow: none;
-    
+
     width: auto;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 header {
@@ -18,7 +22,7 @@ header {
     padding: 10px;
 }
 
-#logo{
+#logo {
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -88,28 +92,83 @@ nav ul li a {
     flex-wrap: wrap;
     margin-top: 100px;
     margin-bottom: 50px;
-    
+
 }
 
-.featured h2{
+.featured h2 {
     margin-right: 50px;
+}
+
+.card:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 04px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.card:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
 }
 
 .card {
     width: 300px;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    /* border: 1px solid #ccc;
+    background-color: #fff; */
     border-radius: 5px;
     padding: 10px;
+    background: transparent;
+    backdrop-filter: blur(10px);
     /* margin: 10px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card figure{
+.card figure {
     width: auto;
     height: 200px;
     object-fit: contain;
 }
+
 .card img {
     width: 100%;
     height: 100%;
@@ -117,7 +176,7 @@ nav ul li a {
 }
 
 .card h3 {
-    color: #e28413;
+    color: #ecd39e;
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
@@ -128,7 +187,7 @@ nav ul li a {
 .card p {
     text-align: center;
     font-size: 16px;
-    color: #000022;
+    color: #ffd900c2;
     font-weight: 600;
 }
 
