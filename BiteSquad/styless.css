@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -59,7 +60,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color:var(--bg);
+  background-color: var(--bg);
 }
 
 .container {
@@ -69,7 +70,7 @@ body {
 }
 
 .text-center {
- 
+
   text-align: center;
 }
 
@@ -112,6 +113,7 @@ body {
     width: 28rem !important;
     height: 36rem !important;
   }
+
   .tranding-slide .tranding-slide-img img {
     width: 28rem !important;
     height: 36rem !important;
@@ -155,6 +157,11 @@ body {
 
 .rating ion-icon {
   color: var(--primary);
+
+}
+
+.rating{
+  display: flex;
 }
 
 .swiper-slide-shadow-left,
@@ -181,18 +188,21 @@ body {
     transform: translateX(-70%) !important;
   }
 }
+
 @media (max-width:450px) {
   .tranding-slider-control .swiper-button-next {
     left: 80% !important;
     transform: translateX(-80%) !important;
   }
 }
+
 @media (max-width:990px) {
   .tranding-slider-control .swiper-button-prev {
     left: 30% !important;
     transform: translateX(-30%) !important;
   }
 }
+
 @media (max-width:450px) {
   .tranding-slider-control .swiper-button-prev {
     left: 20% !important;
@@ -237,7 +247,9 @@ body {
   #DELIVERY
 \*-----------------------------------*/
 
-.delivery-content { margin-block-end: 40px; }
+.delivery-content {
+  margin-block-end: 40px;
+}
 
 .delivery .section-title {
   max-width: 17ch;
@@ -246,7 +258,9 @@ body {
   color: #222224;
 }
 
-.delivery .section-text { margin-block: 15px 25px; }
+.delivery .section-text {
+  margin-block: 15px 25px;
+}
 
 .delivery-banner {
   position: relative;
@@ -261,14 +275,147 @@ body {
   transition: var(--transition-2);
 }
 
+.delivery {
+  background-color: #f9f6ef;
+
+}
+
+
+/*----------------------------------*/
+/* CITIES */
+/*----------------------------------*/
+
+.box img {
+  width: 30%;
+  height: auto;
+  margin: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+
+}
+
+.icon-small {
+  color: #e67e22;
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  font-size: 120%;
+  /*secrets to align text and icons*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+
+/*-----------------------------------*\
+  #BANNER
+\*-----------------------------------*/
+
+.banner {
+  color: var(--white);
+}
+
+.banner-list {
+  display: grid;
+  gap: 10px;
+}
+
+.banner-lg {
+  height: 430px;
+}
+
+.banner-sm {
+  height: 200px;
+}
+
+.banner-md {
+  height: 240px;
+}
+
+.banner-card {
+  position: relative;
+  height: 100%;
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+
+.banner-card .banner-img {
+  background-color: var(--gainsboro);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: var(--transition-2);
+}
+
+.banner-card:is(:hover, :focus-within) .banner-img {
+  transform: scale(1.05);
+}
+
+.banner-item-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  right: 20px;
+  max-height: calc(100% - 30px);
+}
+
+.banner-md .banner-item-content {
+  left: 50%;
+}
+
+.banner-subtitle,
+.banner-title {
+  font-family: var(--ff-rubik);
+  font-weight: var(--fw-600);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.banner-lg .banner-subtitle {
+  font-size: var(--fs-2);
+  margin-block-end: 10px;
+}
+
+.banner-lg .banner-title {
+  font-size: var(--fs-1);
+  max-width: 20ch;
+}
+
+:is(.banner-md, .banner-sm) .banner-title {
+  font-size: var(--fs-2);
+  max-width: 12ch;
+}
+
+.banner-card .banner-text {
+  margin-block: 10px 15px;
+}
+
+.banner-card .btn {
+  --bg-color: var(--dark-orange);
+  --height: 40px;
+  --padding-inline: 25px;
+}
+
+.banner-card .btn:is(:hover, :focus) {
+  background-color: var(--rich-black-fogra-29);
+}
+
 
 /*-----------------------------------*\
   #TESTIMONIALS
 \*-----------------------------------*/
 
-.testi { text-align: center; }
+.testi {
+  text-align: center;
+}
 
-.testi .section-title { margin-block: 10px 20px; }
+.testi .section-title {
+  margin-block: 10px 20px;
+}
 
 .testi .section-text {
   max-width: 44ch;
@@ -295,14 +442,18 @@ body {
   overflow: hidden;
 }
 
-.testi-card .testi-name { margin-block-end: 2px; }
+.testi-card .testi-name {
+  margin-block-end: 2px;
+}
 
 .testi-card .testi-title {
   font-family: var(--ff-rubik);
   font-size: var(--fs-4);
 }
 
-.testi-card .testi-text { margin-block: 20px 15px; }
+.testi-card .testi-text {
+  margin-block: 20px 15px;
+}
 
 .testi-item {
   min-width: 100%;

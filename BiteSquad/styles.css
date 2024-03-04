@@ -18,54 +18,9 @@ body {
 
 
 
-header {
-    background: transparent;
-    color: #fff;
-    padding: px;
-    width: 100%;
-}
 
-#logo {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    padding: 5px;
-    margin-top: 5px;
-}
 
-/* Main navi */
-.main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 0;
-}
 
-.main-nav li {
-    display: inline-block;
-    margin-left: 3px;
-
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-    padding: 15px 8px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: border-bottom 0.2s;
-    transition: border-bottom 0.2s;
-}
-
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #FB8500;
-}
-
-.main-nav li:first-child {
-    margin-left: 0;
-}
 
 .header {
     display: flex;
@@ -82,7 +37,7 @@ header {
     color: #fff;
     text-align: center;
     height: auto;
-    /* padding: 100px 0; */
+    padding: 100px;
 }
 
 .hero h2 {
@@ -103,17 +58,39 @@ header {
     margin-bottom: 40px;
 }
 
-.hero a {
-    padding: 20px 50px;
-    background-color: #FB8500;
-    border-radius: 30px;
-    text-decoration: none;
-    color: #FDF0D5;
-    font-size: large;
-    font-weight: 800;
-    text-transform: uppercase;
+
+
+/* CSS */
+.button-87 {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
+.button-87:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
+}
 .featured {
     display: flex;
     justify-content: space-around;
@@ -229,6 +206,83 @@ header {
     bottom: 0;
 }
 
-.btn{
+.btn {
     border-radius: 8px;
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about {
+    text-align: center;
+    color: black;
+}
+
+.about-banner {
+    position: relative;
+    aspect-ratio: 1 / 0.9;
+}
+
+.about-img {
+    max-width: max-content;
+    margin-inline: auto;
+}
+
+.about-banner .abs-img {
+    top: 0;
+    left: 100px;
+}
+
+.about .section-title {
+    max-width: 15ch;
+    margin-block: 40px 10px;
+    margin-inline: auto;
+    color: black;
+}
+
+.about-list {
+    margin-block: 20px 30px;
+}
+
+.about-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-item:not(:last-child) {
+    margin-block-end: 10px;
+}
+
+.about-item ion-icon {
+    background-color: var(--deep-saffron);
+    color: black;
+    font-size: 1.2rem;
+    padding: 4px;
+    border-radius: 50%;
+    --ionicon-stroke-width: 110px;
+}
+
+.about-item .span {
+    color: var(--rich-black-fogra-29);
+    font-family: var(--ff-rubik);
+    font-weight: var(--fw-500);
+}
+
+
+
+.about .btn {
+    margin-inline: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.about {
+    background-color: #f9f6ef;
 }
