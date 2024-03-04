@@ -11,29 +11,30 @@
     <title>BiteSquad</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="styless.css">
     <title>Fody Slider</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styless.css">
-
-
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
-<html lang="en">
+
 
 <body>
 
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" src="log1" alt="Logo">
+                <img src="logo.png" alt="Logo">
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Special</a></li>
-                <li><a href="#">Deilivery</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Cities</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#tranding">Special</a></li>
+                <li><a href="#delivery">Deilivery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cities">Cities</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contacts">Contact</a></li>
+                <li><a href="./Login/login.html">Sign in</a></li>
             </ul>
 
             <div class="mobile-menu-icon">
@@ -47,25 +48,13 @@
     </header>
 
 
-    <script src="assets/js/menu.js"></script>
-
-
-    <script>
-        const toggle_Btn = document.querySelector('.toogle_btn')
-        const toggle_BtnIcon = document.querySelector('.toogle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
-        toogleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
-            toogleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
-        }
-    </script>
-
-    <section class="hero">
-        <h2>Foodiez:Savor the Flavor,Feed Your Soul!</h2>
-        <p>Welcome to Foodiez, where culinary delight meets creativity! 
-            Nestled in the heart of Kolkata.</p>
-        <a href="#" class="button-87">Order Now</a>
+    <section class="hero_section">
+        <h2>Foodiez : Savor the Flavor, Feed Your Soul!</h2>
+        <div class="description">
+            <p>Welcome to Foodiez, where culinary delight meets creativity!</p>
+            <p class="kolkata">Nestled in the heart of Kolkata.</p>
+        </div>
+        <a href="#" class="order-now">Order Now</a>
     </section>
 
     <section class="featured">
@@ -90,14 +79,12 @@
 
     <!--Menu scroll-->
 
-    <body>
-
         <section id="tranding">
-            <div class="container">
+            <div class="header_container">
                 <h3 class="text-center section-subheading">- Popular Dishes -</h3>
                 <h1 class="text-center section-heading">Special Offer</h1>
             </div>
-            <div class="container">
+            <div class="slider_container">
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">
                         <!-- Slide-start -->
@@ -290,19 +277,12 @@
                 </div>
             </div>
         </section>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
-        </script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src="script.js"></script>
-
-    </body>
 
     <!-- 
         - #DELIVERY
       -->
 
-    <section class="section section-divider gray delivery">
+    <section class="section section-divider gray delivery" id="delivery">
         <div class="container">
 
             <div class="delivery-content">
@@ -312,9 +292,9 @@
                 </h2>
 
                 <p class="section-text">
-                    With the latest technological development, food ordering has become much easier. 
-                    The food ordering system 
-                    is designed in such a way as it is not that costly yet a perfect system to satisfy the needs of 
+                    With the latest technological development, food ordering has become much easier.
+                    The food ordering system
+                    is designed in such a way as it is not that costly yet a perfect system to satisfy the needs of
                 </p>
 
                 <button class="btn btn-hover">Order Now</button>
@@ -392,72 +372,68 @@
     <!--Current cities-->
 
     <section class="section-cities" id="cities">
-        <div class="row">
+        <div class="city-heading">
             <h2>We're currently in these cities</h2>
         </div>
-        <div class="row js--wp-3">
-            <div class="col span-1-of-4 box">
-                <img src="assets/images/kolkata.jpg" alt="Kolkata">
-                <h3 align="center">Kolkata</h3>
+        <div class="restaurant-cities">
+            <div class="each-city">
+                <div class="city_img">
+                    <img src="assets/images/kolkata.jpg" alt="Kolkata">
+                </div>
+                <h3>Kolkata</h3>
                 <div class="city-feature">
-                    <i class="ion-ios-person icon-small"></i>
                     1600+ happy eaters
                 </div>
                 <div class="city-feature">
-                    <i class="ion-ios-star icon-small"></i>
                     60+ top chefs
                 </div>
                 <div class="city-feature">
-                    <i class="ion-social-twitter icon-small"></i>
-                    <a href="#">@spicyvillage_delhi</a>
+                    <a href="#">@Foodiez_kol</a>
                 </div>
             </div>
-            <div class="col span-1-of-4 box">
-                <img src="assets/images/bangalore.jpg" alt="Bangalore">
-                <h3 align="center">Bangalore</h3>
+            <div class="each-city">
+                <div class="city_img">
+                    <img src="assets/images/bangalore.jpg" alt="Bangalore">
+                </div>
+                <h3>Bangalore</h3>
                 <div class="city-feature">
-                    <i class="ion-ios-person icon-small"></i>
                     3700+ happy eaters
                 </div>
                 <div class="city-feature">
-                    <i class="ion-ios-star icon-small"></i>
                     160+ top chefs
                 </div>
                 <div class="city-feature">
-                    <i class="ion-social-twitter icon-small"></i>
-                    <a href="#">@spicyvillage_blore</a>
+                    <a href="#">@Foodiez_blore</a>
                 </div>
             </div>
-            <div class="col span-1-of-4 box">
-                <img src="assets/images/hyderabad.jpg" alt="Hyderabad">
-                <h3 align="center">Hyderabad</h3>
+            <div class="each-city">
+                <div class="city_img">
+                    <img src="assets/images/hyderabad.jpg" alt="Hyderabad">
+                </div>
+                <h3>Hyderabad</h3>
                 <div class="city-feature">
-                    <i class="ion-ios-person icon-small"></i>
                     2300+ happy eaters
                 </div>
                 <div class="city-feature">
-                    <i class="ion-ios-star icon-small"></i>
                     110+ top chefs
                 </div>
                 <div class="city-feature">
-                    <i class="ion-social-twitter icon-small"></i>
-                    <a href="#">@spicyvillage_hyd</a>
+                    <a href="#">@Foodiez_hyd</a>
                 </div>
             </div>
-            <div class="col span-1-of-4 box">
-                <img src="assets/images/uttarpradesh.jpg" alt="Uttar Pradesh">
-                <h3 align="center"> Uttar Pradesh</h3>
+            <div class="each-city">
+                <div class="city_img">
+                    <img src="assets/images/uttarpradesh.jpg" alt="Uttar Pradesh">
+                </div>
+                <h3> Uttar Pradesh</h3>
                 <div class="city-feature">
-                    <i class="ion-ios-person icon-small"></i>
                     1200+ happy eaters
                 </div>
                 <div class="city-feature">
-                    <i class="ion-ios-star icon-small"></i>
                     50+ top chefs
                 </div>
                 <div class="city-feature">
-                    <i class="ion-social-twitter icon-small"></i>
-                    <a href="#">@spicyvillage_up</a>
+                    <a href="#">@Foodiez_up</a>
                 </div>
             </div>
         </div>
@@ -469,7 +445,7 @@
         - #BANNER
       -->
 
-    <section class="section section-divider gray banner">
+    <section class="section section-divider gray banner" id ="offers">
         <div class="container">
 
             <ul class="banner-list">
@@ -555,7 +531,7 @@
         - #TESTIMONIALS
       -->
 
-    <section class="section section-divider white testi">
+    <section class="section section-divider white testi" >
         <div class="container">
 
             <p class="section-subtitle">Testimonials</p>
@@ -590,7 +566,7 @@
                         </div>
 
                         <blockquote class="testi-text">
-                            "Their brunch is awesome, I love the Butter Chicken and the Garlic Naan. 
+                            "Their brunch is awesome, I love the Butter Chicken and the Garlic Naan.
                             Pizza is really good as well."
                         </blockquote>
 
@@ -624,7 +600,7 @@
                         </div>
 
                         <blockquote class="testi-text">
-                            "This is always our breakfast stop before heading home from vacation. 
+                            "This is always our breakfast stop before heading home from vacation.
                             Always delicious. Always great service. Always worth the stop."
                         </blockquote>
 
@@ -686,7 +662,8 @@
 
                 <div class="footer-brand">
 
-                    <a href="#" class="logo" style="color: aliceblue;"><img src="logo.png" width="100px" alt="Logo"><span class="span"></span></a>
+                    <a href="#" class="logo" style="color: aliceblue;"><img src="logo.png" width="100px"
+                            alt="Logo"><span class="span"></span></a>
 
                     <p class="footer-text">
                         Financial experts support or help you to to find out which way you can raise your funds
@@ -738,7 +715,8 @@
                     </li>
 
                     <li>
-                        <address class="footer-list-item">(EM Bypass), 5, JBS Haldane Ave, Kolkata, West Bengal 700105</address>
+                        <address class="footer-list-item">(EM Bypass), 5, JBS Haldane Ave, Kolkata, West Bengal 700105
+                        </address>
                     </li>
 
                 </ul>
@@ -763,37 +741,38 @@
 
                 </ul>
 
+                <form action="" class="footer-form" id="contacts">
+                <p class="footer-list-title">Book a Table</p>
 
-                    <p class="footer-list-title">Book a Table</p>
+                <div class="input-wrapper">
 
-                    <div class="input-wrapper">
+                    <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
+                        class="input-field">
 
-                        <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
-                            class="input-field">
+                    <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
+                        class="input-field">
 
-                        <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
-                            class="input-field">
+                </div>
 
-                    </div>
+                <div class="input-wrapper">
 
-                    <div class="input-wrapper">
+                    <select name="total_person" aria-label="Total person" class="input-field">
+                        <option value="person">Person</option>
+                        <option value="2 person">2 Person</option>
+                        <option value="3 person">3 Person</option>
+                        <option value="4 person">4 Person</option>
+                        <option value="5 person">5 Person</option>
+                    </select>
 
-                        <select name="total_person" aria-label="Total person" class="input-field">
-                            <option value="person">Person</option>
-                            <option value="2 person">2 Person</option>
-                            <option value="3 person">3 Person</option>
-                            <option value="4 person">4 Person</option>
-                            <option value="5 person">5 Person</option>
-                        </select>
+                    <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
 
-                        <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
+                </div>
 
-                    </div>
+                <textarea name="message" required placeholder="Message" aria-label="Message"
+                    class="input-field">
+                </textarea>
 
-                    <textarea name="message" required placeholder="Message" aria-label="Message"
-                        class="input-field"></textarea>
-
-                    <button type="submit" class="btn">Book a Table</button>
+                <button type="submit" class="btn">Book a Table</button>
 
                 </form>
 
@@ -816,6 +795,10 @@
 
         </div>
     </footer>
+
+    <script src="script.js"></script>
+
+    <script src="assets/js/menu.js"></script>
 </body>
 
 </html>
