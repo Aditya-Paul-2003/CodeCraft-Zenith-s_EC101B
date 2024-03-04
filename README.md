@@ -3,9 +3,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Aditya-Paul-2003/CodeCraft-Zenith-s_EC101B">
-    <img src="https://github.com/BiteSquad/logo.png" alt="Logo" width="400" height="400">
-  </a>
+  
+   ![Foodiez logo](https://github.com/Aditya-Paul-2003/CodeCraft-Zenith-s_EC101B/assets/155001226/0709b6c0-2baf-4177-8d84-b3f08bec5a85)
+
+  
 
  # Foodiez
   ## A Food Delivery & Restaurant Booking Website
